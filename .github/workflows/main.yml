@@ -18,7 +18,11 @@ jobs:
           pwd
       - name : print
         if: env.var <= 0.8
-        run:  echo "${{ env.var }}"
+        uses: actions/github-script@v3
+        with:
+          script: |
+             core.setFailed('coverage less than 70%')
+        #run:  echo "${{ env.var }}"
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
