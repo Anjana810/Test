@@ -13,12 +13,12 @@ jobs:
           echo "This is the working directory"
           a=$(egrep -o 'line-rate="[^"]+"' coverage.cobertura.xml | cut -d\" -f2)
           #echo $a
-          echo "action_state=yellow" >> $GITHUB_ENV
+          echo "var=$a" >> $GITHUB_ENV
           ls
           pwd
       - name : print
         if: env.var <= 10
-        run:  echo "${{ env.action_state }}"
+        run:  echo "${{ env.var }}"
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
