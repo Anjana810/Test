@@ -9,8 +9,10 @@ jobs:
         shell: bash
         run: |
           var = 10
-          if: var < 0.7
-          uses: actions/github-script@v3
-          with:
-             script: |
+          if [ $var -lt 70 ]
+          then
+            uses: actions/github-script@v3
+            with:
+              script: |
                 core.setFailed('coverage less than 70')
+          fi
