@@ -8,7 +8,10 @@ jobs:
       - name : compare values
         shell: bash
         run: |
-          var = 10
+          pwd
+          ls
+          echo "This is the working directory"
+          #var = 10
           if [ $var -lt 70 ]
           then
             uses: actions/github-script@v3
