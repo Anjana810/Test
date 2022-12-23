@@ -14,12 +14,11 @@ jobs:
           a=$(egrep -o 'line-rate="[^"]+"' coverage.cobertura.xml | cut -d\" -f2)
           #echo $a
           echo "action_state=yellow" >> $GITHUB_ENV
-          echo "${{ env.action_state }}"
           ls
           pwd
       - name : print
         if: env.var <= 10
-        run:  echo "ghjdfhgg"
+        run:  echo "${{ env.action_state }}"
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
