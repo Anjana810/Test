@@ -9,6 +9,8 @@ jobs:
         shell: bash
         run: 
           echo "This is the working directory"
+          ls
+          pwd
           #var = 10
           #if [ $var -lt 70 ]
           #then
