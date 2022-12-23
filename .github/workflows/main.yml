@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : compare values
+        shell: bash
         run: |
           var = 10
           if: var < 0.7
