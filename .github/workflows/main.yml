@@ -12,7 +12,8 @@ jobs:
         run: |
           echo "This is the working directory"
           a=$(egrep -o 'line-rate="[^"]+"' coverage.cobertura.xml | cut -d\" -f2)
-          #echo $a
+          echo "The coverage is $a"
+          echo $a*100
           echo "var=$a" >> $GITHUB_ENV
           ls
           pwd
