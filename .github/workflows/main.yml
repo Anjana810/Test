@@ -17,12 +17,13 @@ jobs:
           ls
           pwd
       - name : print
-        if: env.var < 0.7
+        if: env.var < 0.8
         uses: actions/github-script@v3
         with:
           script: |
              core.setFailed('coverage less than 70%')
-        #run:  echo "${{ env.var }}"
+      - name: Check if this will run after above step fails 
+        run:  echo "The test passed"
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
