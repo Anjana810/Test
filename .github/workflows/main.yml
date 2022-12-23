@@ -13,11 +13,11 @@ jobs:
           echo "This is the working directory"
           a=$(egrep -o 'line-rate="[^"]+"' coverage.cobertura.xml | cut -d\" -f2)
           #echo $a
-          echo "var=$a*100" >> $GITHUB_ENV
+          echo "var=$a" >> $GITHUB_ENV
           ls
           pwd
       - name : print
-        if: env.var <= 80
+        if: env.var <= 0.8
         run:  echo "${{ env.var }}"
           #if [ $var -lt 70 ]
           #then
