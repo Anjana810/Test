@@ -8,7 +8,7 @@ jobs:
       - name : compare values
         run: |
           var = 10
-          if: ${{ var }} < 0.7
+          if: var < 0.7
           uses: actions/github-script@v3
           with:
              script: |
