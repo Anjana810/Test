@@ -11,7 +11,7 @@ jobs:
           echo "This is the working directory"
           ls
           pwd
-          #var = 10
+          var = $10
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
