@@ -7,7 +7,7 @@ jobs:
     steps:
       - name : compare values
         shell: bash
-        run: 
+        run: |
           echo "This is the working directory"
           ls
           pwd
