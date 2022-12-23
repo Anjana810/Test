@@ -9,9 +9,12 @@ jobs:
         shell: bash
         run: |
           echo "This is the working directory"
+          echo "var=10" >> $GITHUB_ENV
           ls
           pwd
-          var = $10
+      - name : print
+        if: env.var == 10
+          echo "ghjdfhgg"
           #if [ $var -lt 70 ]
           #then
            # uses: actions/github-script@v3
