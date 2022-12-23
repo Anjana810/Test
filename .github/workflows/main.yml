@@ -7,15 +7,13 @@ jobs:
     steps:
       - name : compare values
         shell: bash
-        run: |
-          pwd
-          ls
+        run: 
           echo "This is the working directory"
           #var = 10
-          if [ $var -lt 70 ]
-          then
-            uses: actions/github-script@v3
-            with:
-              script: |
-                core.setFailed('coverage less than 70')
-          fi
+          #if [ $var -lt 70 ]
+          #then
+           # uses: actions/github-script@v3
+            #with:
+             # script: |
+              #  core.setFailed('coverage less than 70')
+          #fi
