@@ -17,7 +17,7 @@ jobs:
           ls
           pwd
       - name : print
-        if: env.var == 10
+        if: env.var <= 10
         run:  echo "ghjdfhgg"
           #if [ $var -lt 70 ]
           #then
