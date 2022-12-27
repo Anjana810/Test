@@ -12,7 +12,7 @@ jobs:
         run: |
           echo "This is the working directory"
           a=$(egrep -o 'line-rate="[^"]+"' coverage.cobertura.xml | cut -d\" -f2)
-          b=$(echo "a*100" | bc)
+          b=$(echo "scale=2; $a*100" | bc)
           echo "The coverage is $b"
           echo "var=$a" >> $GITHUB_ENV
           ls
